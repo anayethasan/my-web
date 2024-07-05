@@ -23,7 +23,7 @@
 
 html {
     font-size: 62.5%;
-    overflow: hidden;
+    overflow: auto;
 }
 body {
     background: var(--bg-color);
@@ -239,7 +239,10 @@ span {
 /* Services Section */
 
 .services {
-    background: var(--second-bg-color);
+    background: var(--bg-color);
+}
+.heading {
+    
 }
 .services-container {
     display: grid;
@@ -249,7 +252,7 @@ span {
 }
 .services-box {
     background-color: var(--main-color);
-    height: 250px;
+    height: 300px;
     border-radius: 3rem;
     cursor: pointer;
     transition: 0.3s ease;
@@ -258,6 +261,7 @@ span {
     background: white;
     color: var(--main-color);
     transform: scale(1.03);
+    border: 1px solid var(--main-color);
 }
 .services-box .services-info {
     display: flex;
@@ -272,4 +276,88 @@ span {
     font-size: 2.5rem;
     font-weight: 500;
     margin-bottom: 1rem;
+}
+.services-info p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    max-height: 100px;
+}
+
+/* Skills Section */
+
+.skills {
+    background: var(--bg-color);
+}
+.heading{
+    text-align: center;
+    font-size: 60px;
+}
+.skills .container {
+    background: #e1352c23;
+    color: var(--text-color);
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 70%;
+    margin: auto;
+    margin-top: 2rem;
+}
+.skills .container .row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    flex-wrap: wrap;
+    gap: 1.8rem;
+}
+.skills .container .bar {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 1rem;
+    background: var(--bg-color);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.skills .container .bar:hover {
+    box-shadow: 0 4px 10px var(--main-color);
+    transform: scale(1.04);
+}
+.skills .container .bar .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.skills .container .bar .info span{
+    font-size: 2rem;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-left: 0.5rem;
+    font-family: var(--second-font);
+}
+
+/* education Section */
+
+.education {
+    background: var(--second-bg-color);
+}
+.education .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.education .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background: rgb(124, 65, 65);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: -2px;
+}
+.education .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
 }
